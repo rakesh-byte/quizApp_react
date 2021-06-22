@@ -2,14 +2,24 @@ import React from 'react'
 import Question from './question'
 import AnswerList from './answerList'
 import Greeting from './greeting'
+// import EndGreeting from './endGreeting'
 
-function QuizArea() {
+function QuizArea(props) {
+    
+    if (props.isFinished){
+           return <Greeting />     
+    }
+
+    // else{
+    //     return <EndGreeting />
+    // }
+
     return (
+
+       
         <div>
-            <h2>Quiz Area</h2>
-            <Question />
-            <AnswerList/>
-            <Greeting />
+            <Question dataSet = {props.dataSet}/>
+            <AnswerList handleClick = {props.handleClick} dataSet = {props.dataSet} />
         </div>
     )
 }

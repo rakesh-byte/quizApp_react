@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Question() {
+function Question(props) {
     return (
         <div>
-            <h2> Question</h2>
+            <h1  className = "question">{props.dataSet.question}</h1>
         </div>
     )
 }

@@ -1,9 +1,12 @@
 import React from 'react'
 
-function Answer() {
+function Answer(props) {
     return (
         <div>
-                        <h2> Answer</h2>
+            <button className = "btnAnswer" 
+                    onClick = {() => props.handleClick(props.choice)} 
+                    type = "button">{props.answer}
+            </button>
         </div>
     )
 }

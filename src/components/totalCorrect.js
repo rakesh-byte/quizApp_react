@@ -1,11 +1,7 @@
 import React from 'react'
 
-function TotalCorrect() {
-    return (
-        <div>
-            <h2> correct</h2>
-        </div>
-    )
+function TotalCorrect(props) {
+    return (<h2  className = "correct"> Correct: {props.Correct}</h2>)
 }
 
 export default TotalCorrect

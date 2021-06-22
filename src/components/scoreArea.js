@@ -3,11 +3,11 @@ import TotalCorrect from './totalCorrect'
 import TotalIncorrect from './totalIncorrect'
 
 
-function ScoreArea() {
+function ScoreArea(props) {
     return (
-        <div>
-            <TotalCorrect />
-            <TotalIncorrect />
+        <div  className = "Scorewrapper">
+            <TotalCorrect Correct = {props.Correct}/>
+            <TotalIncorrect Incorrect = {props.Incorrect}/>
         </div>
     )
 }

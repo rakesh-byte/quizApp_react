@@ -1,11 +1,18 @@
 import React from 'react'
 import Answer from './answer';
 
-function AnswerList() {
+function AnswerList(props) {
+
+    const options = [];
+
+    for(let i =0 ; i < props.dataSet.options.length; i++)
+    {
+        options.push(<Answer choice ={i} handleClick = {props.handleClick} answer = {props.dataSet.options[i]} /> )
+    }
+
     return (
         <div>
-            <h2> Answer list</h2>
-            <Answer />            
+            {options}           
         </div>
     )
 }
